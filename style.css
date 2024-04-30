@@ -1,22 +1,20 @@
 @font-face {
   font-family: "Figtree";
   src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
-  src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf)
-    format("truetype");
 }
 
 /* Custom Properties */
 
 :root {
-    --clr-yellow: hsl(47, 88%, 63%);
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-grey: hsl(0, 0%, 50%);
-    --clr-black: hsl(0, 0%, 7%);
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
 
-    --fs-regular: 1rem;
+  --fs-regular: 1rem;
 
-    --fw-regular: 500;
-    --fw-bold: 800;
+  --fw-regular: 500;
+  --fw-bold: 800;
 }
 
 /* CSS Resets */
@@ -34,13 +32,9 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  width: 100%;
-  min-height: 100vh;
   font-family: "Figtree", sans-serif;
   font-size: var(--fs-regular);
   background-color: var(--clr-yellow);
-  /* display: grid;
-  place-items: center; */
 }
 
 img,
@@ -76,12 +70,64 @@ h6 {
 
 /* Card styles */
 
+p {
+  margin-block: 1rem;
+  max-width: max-content;
+}
+
 .container {
-    background-color: var(--clr-white);
-    max-width: 375px;
-    padding: 1rem;
-    margin: 200px auto;
-    border: 1px solid var(--clr-black);
-    border-radius: 20px;
-    box-shadow: 8px 8px;
+  background-color: var(--clr-white);
+  max-width: 320px;
+  padding: 1.25rem;
+  margin: 200px auto;
+  border: 1px solid var(--clr-black);
+  border-radius: 20px;
+  box-shadow: 8px 8px;
+  font-weight: var(--fw-bold);
+
+  .main-img-box {
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    border-radius: 16px;
+  }
+
+  .status {
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-yellow);
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+
+  .publication {
+    font-size: 0.875rem;
+    font-weight: var(--fw-regular);
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+  }
+
+  h1:hover {
+    color: var(--clr-yellow);
+    cursor: pointer;
+  }
+
+  .description {
+    font-weight: var(--fw-regular);
+    color: var(--clr-grey);
+  }
+
+  .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .profile-img {
+      width: 35px;
+      height: 35px;
+    }
+  }
 }
